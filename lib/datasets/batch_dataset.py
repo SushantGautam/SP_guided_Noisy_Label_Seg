@@ -254,7 +254,7 @@ class BGDataset(SlimDataLoaderBase):
 
 if __name__ == '__main__':
     # Params
-    data_dir = '/group/gaozht/Dataset/JSRT_noise/'
+    data_dir = 'Dataset/JSRT_noise/'
     batch_size = 2
     shuffle = False #True
     phase = 'train' #'train'
@@ -269,7 +269,7 @@ if __name__ == '__main__':
     # save some images
     import matplotlib as mpl; mpl.use('Agg')
     import matplotlib.pyplot as plt
-    save_dir = '/group/gaozht/nlseg_exp/output/verify_dataset_noise/'
+    save_dir = 'nlseg_exp/output/verify_dataset_noise/'
 
     for ith, batch in enumerate(dataset):
         # print(batch.keys())

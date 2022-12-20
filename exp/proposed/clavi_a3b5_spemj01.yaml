@@ -2,7 +2,7 @@
 data:
   dataset: BGDataset
   dataname: clavicle
-  data_dir: '/group/gaozht/Dataset/JSRT_noise3c/'
+  data_dir: 'Dataset/JSRT_noise3c/'
   aug_rot90: True   # rotate 90 degree
 
   use_noisy_label: True
@@ -14,7 +14,7 @@ data:
   load_superpixel_label: True   # load superpixel label
   sp_name: 'superpixel_0130_clavi_a3b5_spemj01_pre'
 
-  em_save_pseudo_dir: '/group/gaozht/nlseg_exp/em_save_pseudo/'
+  em_save_pseudo_dir: 'nlseg_exp/em_save_pseudo/'
 
 model:
   network: 'Generic_UNet'

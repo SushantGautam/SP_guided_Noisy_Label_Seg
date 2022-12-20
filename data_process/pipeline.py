@@ -301,7 +301,7 @@ def noisy_label_organize():
 
 if __name__ == '__main__':
     Params = {
-        'dataname': 'jsrt',         #{'jsrt', 'isic', }
+        'dataname': 'isic',         #{'jsrt', 'isic', }
 
         'dataset_noise_ratio': [0.3, 0.5, 0.7, 0.9, 1.0],
         'sample_noise_ratio':  [0.5, 0.7],
@@ -309,9 +309,9 @@ if __name__ == '__main__':
 
     # build vars
     roots = {
-        'shenzhen': '/group/gaozht/Dataset/shenzhen/',
-        'isic':     '/group/gaozht/Dataset/ISIC/',
-        'jsrt':     '/group/gaozht/Dataset/JSRT_noise/'
+        'shenzhen': 'Dataset/shenzhen/',
+        'isic':     'Dataset/ISIC/',
+        'jsrt':     'Dataset/JSRT_noise/'
     }
 
     root = roots[Params['dataname']]

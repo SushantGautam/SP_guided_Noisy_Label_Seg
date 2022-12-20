@@ -8,13 +8,15 @@ from lib.configs.parse_arg import opt, args
 if __name__ == '__main__':
     # make default dirs
     random_init(args.seed)
+    print("Warm up random seed: {}".format(args.seed))
 
-    if args.cfg != 'exp/default.yaml':
-
+    if args.cfg != 'exp/default.yaml_':
+        print('Using config file: {}'.format(args.cfg))
         # update config
         update_config(args.cfg)
         opt = config
         opt = default_complete(opt, args.id)
+        print(dict(opt))
 
         # mkdir
         if not os.path.exists(opt.model_dir):

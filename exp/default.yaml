@@ -1,7 +1,7 @@
 data:
   dataset: BGDataset
   dataname: lesion      # class name, used in dataloader (class name in *.json)
-  data_dir: 'Dataset/ISIC_noise2/'    # data directory
+  data_dir: 'Dataset/ISIC_noise/'    # data directory
   aug_rot90: True   # rotate 90 degree              # data augmentation
 
   use_noisy_label: True

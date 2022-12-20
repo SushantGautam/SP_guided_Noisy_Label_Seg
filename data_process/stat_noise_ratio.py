@@ -14,7 +14,8 @@ Given noisy dataset & original dataset, calculate clean ratios. (noise ratio = 1
 
 def noise_metric(noise_set):
     # load noisy label & gt label
-    if subdir == 'ISIC_noise2':
+    # if subdir == 'ISIC_noise2':
+    if subdir == 'ISIC_noise':
         paths['noisy_label'] = sorted(glob(Params['root'] + 'label_noise_%.1f_%.1f_png/*.png' % (noise_set[0], noise_set[1])))
         all_noisy_images = np.zeros((N, 128, 128), dtype=np.uint8)
     elif subdir in ['JSRT_noise2', 'JSRT_noise3']:
@@ -46,17 +47,18 @@ def noise_metric(noise_set):
 
 
 if __name__ == '__main__':
-    subdir = 'JSRT_noise'      # ISIC_noise
+    subdir = 'ISIC_noise'      # ISIC_noise
     cls = 'clavicle'
     Params = {
-        'root':            '/group/gaozht/Dataset/%s/train/' % subdir,
-        'clean_label_dir': '/group/gaozht/Dataset/%s/train/label_png/' % subdir,
+        'root':            'Dataset/%s/train/' % subdir,
+        'clean_label_dir': 'Dataset/%s/train/label_png/' % subdir,
         'noise_setting': [[0.3, 0.5], [0.3, 0.7], [0.5, 0.5], [0.5, 0.7],
                           [0.7, 0.5], [0.7, 0.7], [0.9, 0.5], [0.9, 0.7], [1.0, 0.5], [1.0, 0.7]]
 
     }
 
-    if subdir == 'ISIC_noise2':
+    if subdir == 'ISIC_noise':    
+    # if subdir == 'ISIC_noise2':
         paths = {
             'gt_label': sorted(glob(Params['clean_label_dir'] + '*.png')),
             'noisy_label': '',

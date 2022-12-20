@@ -8,7 +8,7 @@ from skimage.io import imread, imsave
 import skimage.exposure
 from glob import glob
 import json
-from data_process.util import NpEncoder
+from util import NpEncoder
 import os
 import numpy as np
 import argparse
@@ -67,10 +67,10 @@ if __name__ == '__main__':
     args = parse_args()
 
     Params = {
-        'root': '/group/gaozht/Dataset/%s/train/image/' % subdir,
-        # 'root_prob': '/group/gaozht/nlseg_exp/output/%s_train/heatmap_npy' %args.super_postfix,
-        'tar_dir': '/group/gaozht/Dataset/%s/train/superpixel_%s/' % (subdir, args.super_postfix),
-        'tar_dir2': '/group/gaozht/Dataset/%s/train/superpixel_vis_%s/' % (subdir,args.super_postfix),
+        'root': 'Dataset/%s/train/image/' % subdir,
+        # 'root_prob': 'nlseg_exp/output/%s_train/heatmap_npy' %args.super_postfix,
+        'tar_dir': 'Dataset/%s/train/superpixel_%s/' % (subdir, args.super_postfix),
+        'tar_dir2': 'Dataset/%s/train/superpixel_vis_%s/' % (subdir,args.super_postfix),
     }
     makedir(Params['tar_dir'])
     makedir(Params['tar_dir2'])

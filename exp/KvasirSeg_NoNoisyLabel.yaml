@@ -1,7 +1,7 @@
 data:
   dataset: BGDataset
   dataname: lesion      # class name, used in dataloader (class name in *.json)
-  data_dir: 'Dataset/ISIC_noise2/'    # data directory
+  data_dir: 'Dataset/KvasirSeg_noise/'    # data directory
   aug_rot90: True   # rotate 90 degree              # data augmentation
 
   use_noisy_label: True
@@ -19,14 +19,14 @@ model:
   conv_kernel_sizes: '[[3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]]'
 
   deep_supervision: False
-  use_finetune: False
-  finetune_model_path: ''
+  use_finetune: True
+  finetune_model_path: 'checkpoints/KvasirSeg_NoNoisyLabel/model_up_epoch_13.pth'
   input_channel: 3      # 3 for color image, 1 for intensity image
 
 train:
-  n_epochs: 200
+  n_epochs: 50
   n_batches: 250
-  train_batch: 32
+  train_batch: 16
   valid_batch: 8
 
   loss_name: 'MultipleOutputLoss2'

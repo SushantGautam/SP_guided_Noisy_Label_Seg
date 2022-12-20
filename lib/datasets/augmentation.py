@@ -330,7 +330,7 @@ if __name__ == '__main__':
     # dataset
     import torch
     from batch_dataset import BGDataset
-    data_dir = '/group/gaozht/Dataset/JSRT_noise/'
+    data_dir = 'Dataset/JSRT_noise/'
     batch_size = 2
     cls = 'lung'
     ds_train = BGDataset(data_dir, batch_size, phase='train', cls=cls, shuffle=True)
@@ -359,7 +359,7 @@ if __name__ == '__main__':
     # save some images
     import matplotlib as mpl; mpl.use('Agg')
     import matplotlib.pyplot as plt
-    save_dir = '/group/gaozht/nlseg_exp/output/verify_dataloader/'
+    save_dir = 'nlseg_exp/output/verify_dataloader/'
     for ith, data in enumerate(train_loader):
         image, label = data['image'], data['gt']
         # clean_label = data['clean_label']

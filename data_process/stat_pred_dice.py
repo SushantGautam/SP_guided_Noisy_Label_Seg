@@ -46,9 +46,9 @@ def stat_dice():
 if __name__ == '__main__':
     subdir = 'ISIC_noise'     # ISIC_noise, JSRT_noise
     Params = {
-        'json_dir': '/group/gaozht/nlseg_exp/em_save_pseudo/0104_skin_a7b7_spem02_sm01/',
+        'json_dir': 'nlseg_exp/em_save_pseudo/0104_skin_a7b7_spem02_sm01/',
 
-        'clean_dir': '/group/gaozht/Dataset/%s/train/label/' % subdir,
+        'clean_dir': 'Dataset/%s/train/label/' % subdir,
         'class':     'lesion',     # 'lesion', 'lung', 'heart', 'clavicle'
     }
     ap = argparse.ArgumentParser()
@@ -56,9 +56,9 @@ if __name__ == '__main__':
     ap.add_argument("--subdir", default='', help="subdir")
     args = vars(ap.parse_args())
     if args['id'] != '':
-        Params['json_dir'] = '/group/gaozht/nlseg_exp/em_save_pseudo/%s/' % args['id']
+        Params['json_dir'] = 'nlseg_exp/em_save_pseudo/%s/' % args['id']
     if args['subdir'] != '':
-        Params['clean_dir'] = '/group/gaozht/Dataset/%s/train/label/' % args['subdir']
+        Params['clean_dir'] = 'Dataset/%s/train/label/' % args['subdir']
     Params['class'] =  args['id'].split('_')[1]
     if Params['class'] == 'clavi':
         Params['class'] = 'clavicle'

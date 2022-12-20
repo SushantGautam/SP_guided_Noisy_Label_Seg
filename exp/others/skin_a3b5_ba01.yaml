@@ -2,7 +2,7 @@
 data:
   dataset: BGDataset
   dataname: lesion
-  data_dir: '/group/gaozht/Dataset/ISIC_noise2/'
+  data_dir: 'Dataset/ISIC_noise2/'
   aug_rot90: True   # rotate 90 degree
 
   use_noisy_label: True

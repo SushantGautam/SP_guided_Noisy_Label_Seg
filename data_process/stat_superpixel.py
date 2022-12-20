@@ -76,8 +76,8 @@ if __name__ == '__main__':
     args = ap.parse_args()
 
     Params = {
-        'super_dir': '/group/gaozht/Dataset/%s/train/%s/' % (args.subdir, args.sup_id),
-        'clean_dir': '/group/gaozht/Dataset/%s/train/label/' % args.subdir,
+        'super_dir': 'Dataset/%s/train/%s/' % (args.subdir, args.sup_id),
+        'clean_dir': 'Dataset/%s/train/label/' % args.subdir,
         'class': args.class_name
     }
 

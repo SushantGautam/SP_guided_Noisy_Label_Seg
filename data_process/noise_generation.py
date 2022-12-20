@@ -187,7 +187,7 @@ if __name__ == '__main__':
     # params
     Params = {
         'classes': ['lung', 'heart', 'clavicle'],
-        'root_dir': '/group/gaozht/Dataset/JSRT_noise/train/',
+        'root_dir': 'Dataset/JSRT_noise/train/',
         'clean_dir': 'label_png/',
         'dataset_noise_ratio': [0.9, 1.0], # [0.3, 0.5, 0.7],
         'sample_noise_ratio': [0.5, 0.7],

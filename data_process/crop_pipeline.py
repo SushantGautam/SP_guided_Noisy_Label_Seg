@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
     # build vars
     roots = {
-        'jsrt':     '/group/gaozht/Dataset/JSRT_noise/'
+        'jsrt':     'Dataset/JSRT_noise/'
     }
     rois = {
         ## only apply cropping for clavicle

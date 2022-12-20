@@ -1,10 +1,10 @@
 data:
   dataset: BGDataset
   dataname: lesion      # class name, used in dataloader (class name in *.json)
-  data_dir: 'Dataset/ISIC_noise2/'    # data directory
+  data_dir: 'Dataset/ISIC_NoNoise/'    # data directory
   aug_rot90: True   # rotate 90 degree              # data augmentation
 
-  use_noisy_label: True
+  use_noisy_label: False
   load_clean_label: True
   dataset_noise_ratio: 0.3      # alpha & beta setting, load corresponding dataset
   sample_noise_ratio:  0.5
@@ -24,9 +24,9 @@ model:
   input_channel: 3      # 3 for color image, 1 for intensity image
 
 train:
-  n_epochs: 200
+  n_epochs: 50
   n_batches: 250
-  train_batch: 32
+  train_batch: 16
   valid_batch: 8
 
   loss_name: 'MultipleOutputLoss2'

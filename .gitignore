@@ -12,3 +12,7 @@ lib/drafts/
 checkpoints
 log
 log_corr
+checkpoints/
+Dataset/
+venv/
+nlseg_exp/
